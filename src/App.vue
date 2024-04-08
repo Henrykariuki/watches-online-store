@@ -1,5 +1,6 @@
 <script setup>
 import MyHeader from './components/MyHeader.vue'
+import 'boxicons'
 </script>
 
 <template>
