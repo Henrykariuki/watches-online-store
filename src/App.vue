@@ -1,18 +1,24 @@
 <script setup>
 import MyHeader from './components/MyHeader.vue'
-import 'boxicons'
+import LeftPanel from './components/LeftPanel.vue'
 </script>
 
 <template>
-  
-<header>
+ <body>
+  <header>
   <MyHeader></MyHeader>
 </header>
   <main>
-    
+    <LeftPanel></LeftPanel>
   </main>
+ </body> 
 </template>
 
 <style scoped>
-
+body {
+  height: 1200px;
+}
+main {
+  height: 
+}
 </style>
