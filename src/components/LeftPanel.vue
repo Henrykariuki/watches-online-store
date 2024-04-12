@@ -48,11 +48,11 @@ import { ChevronDown, Minus, Plus, } from 'lucide-vue-next';
                     </div>
                 </div>
                 <div class="category">
-                    <div class="remove"><Minus /></div>
+                    <div class="remove"><Minus Plus size="16px"/></div>
                     <p class="category-text-red">Mens</p>
                 </div>
                 <div class="category">
-                    <div class="add"><Plus /></div>
+                    <div class="add"><Plus Plus size="16px"/></div>
                     <p class="category-text">Womens</p>
                 </div>
             </div>
@@ -65,11 +65,11 @@ import { ChevronDown, Minus, Plus, } from 'lucide-vue-next';
                 </div>
                 <input type="text" placeholder="Search brands" class="search-bar">
                 <div class="category">
-                    <div class="remove"><Minus /></div>
+                    <div class="remove"><Minus Plus size="16px"/></div>
                     <p class="category-text-red">Rolex</p>
                 </div>
                 <div class="category">
-                    <div class="add"><Plus /></div>
+                    <div class="add"><Plus Plus size="16px" /></div>
                     <p class="category-text">Rado</p>
                 </div>
             </div>
@@ -81,11 +81,11 @@ import { ChevronDown, Minus, Plus, } from 'lucide-vue-next';
                     </div>
                 </div>
                 <div class="category">
-                    <div class="remove"><Minus /></div>
+                    <div class="remove"><Minus Plus size="16px" /></div>
                     <p class="category-text">Fair</p>
                 </div>
                 <div class="category">
-                    <div class="add"><Plus /></div>
+                    <div class="add"><Plus size="16px"/></div>
                     <p class="category-text">Good</p>
                 </div>
             </div>
@@ -101,12 +101,8 @@ import { ChevronDown, Minus, Plus, } from 'lucide-vue-next';
 }
 
 .left-side-bar {
-    position: fixed;
-    left: 0;
-    height: 400px;
-    overflow-y: scroll;
-    top: 233px;
     width: 280px;
+    border-right:  1px solid rgb(219, 218, 218);
 }
 .items {
     width: 200px;
@@ -125,7 +121,7 @@ import { ChevronDown, Minus, Plus, } from 'lucide-vue-next';
     margin-left: 10px;
 }
 .watches {
-    font-size: 22px;
+    font-size: 16px;
     font-weight: 600;
 }
 .container-one,
@@ -133,7 +129,7 @@ import { ChevronDown, Minus, Plus, } from 'lucide-vue-next';
 .container-three,
 .container-four {
     width: 250px;
-    height: 200px; 
+    height: auto; 
 }
 .category {
     width: 200px;
@@ -144,6 +140,7 @@ import { ChevronDown, Minus, Plus, } from 'lucide-vue-next';
     padding-left: 20px;
 }
 .category-text {
+    font-size: 13px;
     font-weight: 600;
 }
 .category-text-red {
@@ -152,6 +149,8 @@ import { ChevronDown, Minus, Plus, } from 'lucide-vue-next';
 .remove, .add {
     width: 25px;
     height: 25px;
+    display: flex;
+    align-items: center;
 }
 .graph-base {
     width: 200px;

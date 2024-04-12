@@ -1,6 +1,8 @@
 <script setup>
 import MyHeader from './components/MyHeader.vue'
 import LeftPanel from './components/LeftPanel.vue'
+import FiltersRow from './components/FiltersRow.vue'
+import ProductsGrid from './components/ProductsGrid.vue'
 </script>
 
 <template>
@@ -8,17 +10,17 @@ import LeftPanel from './components/LeftPanel.vue'
   <header>
   <MyHeader></MyHeader>
 </header>
-  <main>
-    <LeftPanel></LeftPanel>
+  <main style="display: flex; ">
+    <div>
+      <LeftPanel></LeftPanel>
+    </div>
+    <div>
+      <FiltersRow></FiltersRow>
+      <ProductsGrid></ProductsGrid>
+    </div>
   </main>
  </body> 
 </template>
 
 <style scoped>
-body {
-  height: 1200px;
-}
-main {
-  height: 
-}
 </style>

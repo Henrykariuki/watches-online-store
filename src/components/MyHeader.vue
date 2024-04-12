@@ -43,7 +43,6 @@ import {Bell, ShoppingCart, User } from 'lucide-vue-next';
   box-sizing: border-box;
 }
 .header-box {
-    position: fixed;
     z-index: 100;
     width: auto;
     height: auto;
@@ -60,7 +59,6 @@ import {Bell, ShoppingCart, User } from 'lucide-vue-next';
   justify-content: space-around;
   border-top: 1px solid rgb(219, 218, 218);
   border-bottom: 1px solid rgb(219, 218, 218);
-  width: 1350px;
   height: 90px;
   align-items: center;
 }
