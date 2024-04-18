@@ -3,7 +3,7 @@ import { X, ChevronDown } from 'lucide-vue-next';
 </script>
 <template>
   <div class="filter-container">
-        <div style="display: flex; margin-left: 16px;">
+        <div style="display: flex; margin-left: 31px;">
             <button class="filter-buttons">Handwatches<X size="12px"/></button>
             <button class="filter-buttons">$1,500 &#183; $30,500<X  size="12px"/></button>
             <button class="filter-buttons">Mens<X  size="12px"/></button>
@@ -20,7 +20,7 @@ import { X, ChevronDown } from 'lucide-vue-next';
   box-sizing: border-box;
 }
 .filter-container {
-    width: 1050px;
+    width: 1100px;
     height: 60px;
     display: flex;
     justify-content: space-between;

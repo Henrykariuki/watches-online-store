@@ -8,19 +8,19 @@ import { ChevronDown, Minus, Plus, } from 'lucide-vue-next';
                 <div class="watches-container">
                     <p class="watches">Watches</p>
                     <div>
-                      <ChevronDown />
+                      <ChevronDown Plus size="16px"  />
                     </div>
                 </div>
                 <div class="category">
-                    <div class="remove"><Minus /></div>
+                    <div class="remove"><Minus Plus size="16px" /></div>
                     <p class="category-text-red">Handwatches</p>
                 </div>
                 <div class="category">
-                    <div class="add"><Plus /></div>
+                    <div class="add"><Plus Plus size="16px" /></div>
                     <p class="category-text">Briefcases</p>
                 </div>
                 <div class="category">
-                    <div class="add"><Plus /></div>
+                    <div class="add"><Plus Plus size="16px" /></div>
                     <p class="category-text">Evening bags</p>
                 </div>
             </div>
@@ -145,6 +145,7 @@ import { ChevronDown, Minus, Plus, } from 'lucide-vue-next';
 }
 .category-text-red {
     color: red;
+    font-size: 13px;
 }
 .remove, .add {
     width: 25px;

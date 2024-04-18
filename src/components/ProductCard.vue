@@ -1,21 +1,48 @@
 <script setup>
-import imagePath from '@/assets/mensWatches.jfif';
+
 import { Heart } from 'lucide-vue-next';
 import { Plus } from 'lucide-vue-next';
+
+const props = defineProps({
+    image: {
+        type: String,
+        required: true
+    },
+    price: {
+        type: Number,
+        required: true
+    },
+    likes: {
+        type: Number,
+        required: true
+    },
+    name: {
+        type: String,
+        required: true
+    },
+    about: {
+        type: String,
+        required: true
+    }
+    
+
+})
+
+
 </script>
 <template>
 <div class="product-card-container">
     <div class="image-container">
-        <img :src="imagePath" alt="green watch" class="image">
+        <img :src="image" alt="green watch" class="image">
         <div class="likes">
-             <p style="font-size: 12px">999<Plus size="8px"/></p>
+             <p style="font-size: 12px">{{ likes }}<Plus size="8px"/></p>
             <Heart size="12px"/>
         </div>
     </div>
     <div class="watch-info-container">
-        <P class="watch-name">Rolex</P>
-        <p class="about-watch">The Oyster Perpetual Day-Date 36 in...</p>
-        <p class="watch-price">$2,500USD</p>
+        <P class="watch-name">{{ name }}</P>
+        <p class="about-watch">{{ about }}</p>
+        <p class="watch-price">{{ price }}</p>
     </div>
 </div>
 </template>
@@ -29,9 +56,10 @@ import { Plus } from 'lucide-vue-next';
 .product-card-container {
     width: auto;
     margin-right: 8px;
+    border: 1px solid black;
 }
 .image {
-    width: 250px;
+    /*width: 250px;*/
     height: 250px;
     object-fit: cover;
 }

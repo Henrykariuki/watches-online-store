@@ -44,7 +44,7 @@ import {Bell, ShoppingCart, User } from 'lucide-vue-next';
 }
 .header-box {
     z-index: 100;
-    width: auto;
+    width: 100%;
     height: auto;
 }
 
@@ -61,6 +61,7 @@ import {Bell, ShoppingCart, User } from 'lucide-vue-next';
   border-bottom: 1px solid rgb(219, 218, 218);
   height: 90px;
   align-items: center;
+  width: 100%;
 }
 
 .header-buttons {
