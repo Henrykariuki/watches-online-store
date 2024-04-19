@@ -62,6 +62,7 @@ import {Bell, ShoppingCart, User } from 'lucide-vue-next';
   height: 90px;
   align-items: center;
   width: 100%;
+  background-color: white;
 }
 
 .header-buttons {

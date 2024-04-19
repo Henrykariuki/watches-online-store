@@ -75,7 +75,7 @@ class="product-style"/>
 <style scoped>
 .container {
     display: grid;
-    grid-template-columns: 260px 260px 260px 260px;
+    grid-template-columns: 25% 25% 25% 25%;
     row-gap: 14px;
     column-gap: 14px;
     width: auto;

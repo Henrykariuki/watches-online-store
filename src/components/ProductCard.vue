@@ -56,7 +56,7 @@ const props = defineProps({
 .product-card-container {
     width: auto;
     margin-right: 8px;
-    border: 1px solid black;
+    background-color: white;
 }
 .image {
     /*width: 250px;*/
