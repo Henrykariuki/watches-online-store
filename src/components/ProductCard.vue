@@ -66,7 +66,7 @@ transform: scale(0.95);
 }
 
 .image {
-    /*width: 250px;*/
+    width: 100%;
     height: 250px;
     object-fit: cover;
 }
@@ -93,5 +93,12 @@ transform: scale(0.95);
     right: 6px;
     display: flex;
     align-items: center;
+}
+@media (max-width: 400px) {
+    .image {
+    width: 100;
+    height: auto;
+    object-fit: fill;
+}
 }
 </style>

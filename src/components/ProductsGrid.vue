@@ -107,11 +107,13 @@ class="product-style"/>
         width: auto;
     }
 }
-@media (max-width: 600px) {
+@media (max-width: 400px) {
     .container {
         display: grid;
-        grid-template-columns: 25%;
+        grid-template-columns: 20% 20%;
         width: auto;
+        row-gap: 6px;
+        column-gap: 6px;
     }
 }
 </style>

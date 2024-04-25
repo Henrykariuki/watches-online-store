@@ -5,7 +5,7 @@ import {Bell, ShoppingCart, User } from 'lucide-vue-next';
  <div class="header-box">
     <div class="header-box">
         <div class="header-container">
-            <p style="font-size: 40px; margin-left: 24px; font-weight: 600">Henry Watches</p>
+            <p class="header-title" style="font-size: 40px; margin-left: 24px; font-weight: 600">Henry Watches</p>
             <div class="header-buttons">
                 <div class="button">Auctions</div>
                 <div class="button"> Buy now</div>
@@ -100,5 +100,18 @@ import {Bell, ShoppingCart, User } from 'lucide-vue-next';
     right: -28px;
     font-weight: 600;
     color: rgb(202, 4, 4);
+}
+@media (max-width: 400px) {
+    .header-container {
+        width: 100%;
+        height: 84px;
+    }
+    .header-buttons {
+        display: none;
+    }
+    .header-icons {
+        display: none;
+    }
+    
 }
 </style>

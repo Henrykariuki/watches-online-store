@@ -18,12 +18,6 @@ import { X, ChevronDown } from 'lucide-vue-next';
   </div>
 </template>
 <style scoped>
-* {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  box-sizing: border-box;
-}
 .filter-container {
     width: 1100px;
     height: 60px;
