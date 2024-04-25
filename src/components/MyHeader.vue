@@ -101,7 +101,7 @@ import {Bell, ShoppingCart, User } from 'lucide-vue-next';
     font-weight: 600;
     color: rgb(202, 4, 4);
 }
-@media (max-width: 300px) {
+@media (max-width: 200px) {
     .header-container {
         width: 100%;
         height: 84px;

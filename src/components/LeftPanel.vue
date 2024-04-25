@@ -200,7 +200,7 @@ import { ChevronDown, Minus, Plus, } from 'lucide-vue-next';
         width: auto;
     }
 }
-@media (max-width: 300px) {
+@media (max-width: 200px) {
     .left-side-bar {
         display: none;
     }
