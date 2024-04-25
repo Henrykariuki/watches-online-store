@@ -94,7 +94,7 @@ transform: scale(0.95);
     display: flex;
     align-items: center;
 }
-@media (max-width: 200px) {
+@media (max-width: 400px) {
     .image {
     width: 100;
     height: auto;
