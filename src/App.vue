@@ -23,4 +23,5 @@ import ProductsGrid from './components/ProductsGrid.vue'
 </template>
 
 <style scoped>
+
 </style>

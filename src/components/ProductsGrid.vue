@@ -84,4 +84,34 @@ class="product-style"/>
 .product-style {
     margin: 4px;
 }
+@media (min-width: 1200px) {
+    .container {
+        display: grid;
+        grid-template-columns: 24% 24% 24% 24%;
+        width: auto;
+    }   
+}
+
+@media (min-width: 700px) and (max-width: 1200px) {
+    .container {
+        display: grid;
+        grid-template-columns: 25% 25% 25%;
+        width: auto;
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        display: grid;
+        grid-template-columns: 25% 25%;
+        width: auto;
+    }
+}
+@media (max-width: 600px) {
+    .container {
+        display: grid;
+        grid-template-columns: 25%;
+        width: auto;
+    }
+}
 </style>

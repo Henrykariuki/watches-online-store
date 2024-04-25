@@ -13,7 +13,7 @@ import { ChevronDown, Minus, Plus, } from 'lucide-vue-next';
                 </div>
                 <div class="category">
                     <div class="remove"><Minus Plus size="16px" /></div>
-                    <p class="category-text-red">Handwatches</p>
+                    <p class="category-text">Handwatches</p>
                 </div>
                 <div class="category">
                     <div class="add"><Plus Plus size="16px" /></div>
@@ -49,7 +49,7 @@ import { ChevronDown, Minus, Plus, } from 'lucide-vue-next';
                 </div>
                 <div class="category">
                     <div class="remove"><Minus Plus size="16px"/></div>
-                    <p class="category-text-red">Mens</p>
+                    <p class="category-text">Mens</p>
                 </div>
                 <div class="category">
                     <div class="add"><Plus Plus size="16px"/></div>
@@ -66,7 +66,7 @@ import { ChevronDown, Minus, Plus, } from 'lucide-vue-next';
                 <input type="text" placeholder="Search brands" class="search-bar">
                 <div class="category">
                     <div class="remove"><Minus Plus size="16px"/></div>
-                    <p class="category-text-red">Rolex</p>
+                    <p class="category-text">Rolex</p>
                 </div>
                 <div class="category">
                     <div class="add"><Plus Plus size="16px" /></div>
@@ -93,12 +93,6 @@ import { ChevronDown, Minus, Plus, } from 'lucide-vue-next';
 </template>
 
 <style scoped>
-* {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  box-sizing: border-box;
-}
 
 .left-side-bar {
     width: 280px;
@@ -124,6 +118,7 @@ import { ChevronDown, Minus, Plus, } from 'lucide-vue-next';
 .watches {
     font-size: 16px;
     font-weight: 600;
+    cursor: pointer;
 }
 .container-one,
 .container-two,
@@ -143,10 +138,7 @@ import { ChevronDown, Minus, Plus, } from 'lucide-vue-next';
 .category-text {
     font-size: 13px;
     font-weight: 600;
-}
-.category-text-red {
-    color: red;
-    font-size: 13px;
+    cursor: pointer;
 }
 .remove, .add {
     width: 25px;
@@ -154,6 +146,11 @@ import { ChevronDown, Minus, Plus, } from 'lucide-vue-next';
     display: flex;
     align-items: center;
 }
+.category:hover {
+    color: red;
+}
+
+
 .graph-base {
     width: 200px;
     height: 1px;
@@ -192,5 +189,15 @@ import { ChevronDown, Minus, Plus, } from 'lucide-vue-next';
     outline: none;
     border: 2px solid grey;
     margin-left: 10px;
+}
+@media (max-width: 700px) {
+    .left-side-bar {
+        width: auto;
+    }
+}
+@media (min-width: 1000px) {
+    .left-side-bar {
+        width: auto;
+    }
 }
 </style>

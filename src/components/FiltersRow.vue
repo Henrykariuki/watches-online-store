@@ -9,7 +9,12 @@ import { X, ChevronDown } from 'lucide-vue-next';
             <button class="filter-buttons">Mens<X  size="12px"/></button>
             <button class="filter-buttons">Rolex<X  size="12px"/></button>
         </div>
-        <button style=" border: none; background-color: white;  padding: 8px 4px; display: flex; text-align: center; margin-right: 8px;">Newest first<ChevronDown size="12px"/></button>
+        <button style=" border: none; 
+        background-color: white;  
+        padding: 8px 4px; display: 
+        flex; text-align: center; 
+        margin-right: 8px;
+        cursor: pointer;">Newest first<ChevronDown size="12px"/></button>
   </div>
 </template>
 <style scoped>
@@ -34,5 +39,10 @@ import { X, ChevronDown } from 'lucide-vue-next';
     padding: 8px 4px;
     display: flex;
     align-items: center;
+    cursor: pointer;
+    transition: 0.15s;
+}
+.filter-buttons:hover {
+    background-color: lightgrey;
 }
 </style>

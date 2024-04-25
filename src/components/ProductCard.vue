@@ -33,7 +33,9 @@ const props = defineProps({
 <template>
 <div class="product-card-container">
     <div class="image-container">
+       <div class="image-box">
         <img :src="image" alt="green watch" class="image">
+       </div>
         <div class="likes">
              <p style="font-size: 12px">{{ likes }}<Plus size="8px"/></p>
             <Heart size="12px"/>
@@ -47,17 +49,22 @@ const props = defineProps({
 </div>
 </template>
 <style scoped>
-* {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  box-sizing: border-box;
-}
+
 .product-card-container {
     width: auto;
     margin-right: 8px;
     background-color: white;
 }
+.image-box {
+    width: auto;
+    height: auto;
+    transition: 0.15s;
+}
+.image-box:hover{
+transform: scale(0.95);
+
+}
+
 .image {
     /*width: 250px;*/
     height: 250px;
@@ -74,9 +81,11 @@ const props = defineProps({
 }
 .watch-info-container {
     padding-top: 8px;
+    background-color: whitesmoke;
 }
 .image-container {
     position: relative;
+    cursor: pointer;
 }
 .likes {
     position: absolute;
