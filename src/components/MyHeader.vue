@@ -1,8 +1,17 @@
 <script setup>
-import {Bell, ShoppingCart, User } from 'lucide-vue-next';
+import {Bell, ShoppingCart, User, Menu, X } from 'lucide-vue-next';
+ function showSidebar() {
+    const sidebar = document.querySelector('.right-side-bar')
+    sidebar.style.display = 'flex'
+ } 
+
+ function hideSidebar() {
+    const sidebar = document.querySelector('.right-side-bar')
+    sidebar.style.display = 'none'
+ }
 </script>
 <template>
- <div class="header-box">
+ <div>
     <div class="header-box">
         <div class="header-container">
             <p class="header-title" style="font-size: 40px; margin-left: 24px; font-weight: 600">Henry Watches</p>
@@ -17,6 +26,7 @@ import {Bell, ShoppingCart, User } from 'lucide-vue-next';
                 <div class="header-icons"><Bell /></div>
                 <div class="header-icons"><ShoppingCart /></div>
                 <div class="header-icons"><User /></div>
+                <div onclick=showSidebar() class="header-icon, menu"><Menu size="38px"/></div>
             </div>
         </div>
         <div class="header-container-info">
@@ -24,6 +34,14 @@ import {Bell, ShoppingCart, User } from 'lucide-vue-next';
                 <p style="font-size: 54px; font-weight: 600;">Watches</p>
                 <div class="watch-count">250</div>
             </div>
+        </div>
+        <div class="right-side-bar">
+            <div onclick=hideSidebar() class="close-button"><X /></div>
+            <div class="button">Auctions</div>
+            <div class="button"> Buy now</div>
+            <div class="button">Hot deals</div>
+            <div class="button">New arrivals</div>
+            <div class="button">Sell item</div>
         </div>
     </div>
  </div>      
@@ -41,12 +59,35 @@ import {Bell, ShoppingCart, User } from 'lucide-vue-next';
     justify-content: space-between;
     align-items: center;
     background-color: white;
+    position: relative;
 }
 .header-container-info {
     position: relative;
     width: 100%;
     height: 116px;
     border-bottom: 1px solid rgb(219, 218, 218);;
+}
+.right-side-bar {
+    position: absolute;
+    border: 1px solid black;
+    background-color: rgba(128, 128, 128, 0.171);
+    backdrop-filter: blur(10px);
+    top: 84px;
+    right: 0;
+    width: 180px;
+    height: 400px;
+    z-index: 1;
+    border-radius: 2px;
+    display: none;
+}
+.close-button {
+    border: 1px solid black; 
+    width:24px; 
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 152px;
 }
 .button {
     padding: 10px;
@@ -101,7 +142,10 @@ import {Bell, ShoppingCart, User } from 'lucide-vue-next';
     font-weight: 600;
     color: rgb(202, 4, 4);
 }
-@media (max-width: 400px) {
+.menu {
+    display: none;
+}
+@media (max-width: 360px) {
     .header-container {
         width: 100%;
         height: 84px;
@@ -112,6 +156,9 @@ import {Bell, ShoppingCart, User } from 'lucide-vue-next';
     .header-icons {
         display: none;
     }
-    
+    .menu {
+    display: block;
+    margin-left: 114px;
+}
 }
 </style>
