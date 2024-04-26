@@ -107,7 +107,7 @@ class="product-style"/>
         width: auto;
     }
 }
-@media (max-width: 260px) {
+@media (max-width: 360px) {
     .container {
         display: grid;
         grid-template-columns: 14% 14%;
