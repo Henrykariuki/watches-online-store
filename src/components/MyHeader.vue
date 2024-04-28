@@ -2,7 +2,7 @@
 import {Bell, ShoppingCart, User, Menu, X } from 'lucide-vue-next';
  function showSidebar() {
     const sidebar = document.querySelector('.right-side-bar')
-    sidebar.style.display = 'flex'
+    sidebar.style.display = 'block'
  } 
 
  function hideSidebar() {
