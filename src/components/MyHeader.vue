@@ -11,23 +11,33 @@ import {Bell, ShoppingCart, User, Menu, X } from 'lucide-vue-next';
  }
 </script>
 <template>
- <div>
-    <div class="header-box">
-        <div class="header-container">
+ <div class="bg-yellow-100">
+    <div class="header-box  width-100% height-auto">
+        <div class="header-container sm:block">
             <p class="header-title" style="font-size: 40px; margin-left: 24px; font-weight: 600">Henry Watches</p>
-            <div class="header-buttons">
+            <div class="hidden sm:flex sm:items-center sm:cursor-pointer">
                 <div class="button">Auctions</div>
                 <div class="button"> Buy now</div>
                 <div class="button">Hot deals</div>
                 <div class="button">New arrivals</div>
                 <div class="button">Sell item</div>
             </div>
-            <div class="header-icons-container">
-                <div class="header-icons"><Bell /></div>
-                <div class="header-icons"><ShoppingCart /></div>
-                <div class="header-icons"><User /></div>
-                <div onclick=showSidebar() class="header-icon, menu"><Menu size="38px"/></div>
+            <div class="header-icons-container hidden sm:flex w-auto h-auto justify-between mr-5 px-4">
+                <div class="header-icons">
+                    <Bell />
+                    <div class="tooltip">Notification</div>
+                </div>
+                <div class="header-icons">
+                    <ShoppingCart />
+                    <div class="tooltip">Shopping Cart</div>
+                </div>
+                <div class="header-icons">
+                    <User />
+                    <div class="tooltip">User Profile</div>
+                </div>
+                
             </div>
+            <div onclick=showSidebar() class="sm:hidden"><Menu size="38px"/></div>
         </div>
         <div class="header-container-info">
             <div class="header-info">
@@ -47,10 +57,10 @@ import {Bell, ShoppingCart, User, Menu, X } from 'lucide-vue-next';
  </div>      
 </template>
 <style scoped>
-.header-box {
+/*.header-box {
     width: 100%;
     height: auto;
-}
+}*/
 .header-container {
     width: 100%;
     height: 84px;
@@ -96,25 +106,30 @@ import {Bell, ShoppingCart, User, Menu, X } from 'lucide-vue-next';
     transition: 0.15s;
     border-radius: 4px;
 }
-.header-buttons {
-    width: auto;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
+
 .button:hover, .header-icons:hover{
     background-color: lightgrey;
 }
 .header-icons-container {
-    width: auto;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    width: 220px;
-    justify-content: space-between;
-    margin-right: 20px;
+   position: relative;
 }
+.tooltip {
+    position: absolute;
+    border: 1px solid black;
+    padding: 4px;
+    background-color: rgb(20, 20, 20);
+    color: white;
+    bottom: -40px;
+    border-radius: 6px;
+    opacity: 0;
+    transition: 0.15s;
+    text-wrap: nowrap;
+}
+
+.header-icons:hover .tooltip {
+    opacity: 1;
+}
+
 .header-icons {
     width: 40px;
     height:40px;
@@ -142,23 +157,5 @@ import {Bell, ShoppingCart, User, Menu, X } from 'lucide-vue-next';
     font-weight: 600;
     color: rgb(202, 4, 4);
 }
-.menu {
-    display: none;
-}
-@media (max-width: 360px) {
-    .header-container {
-        width: 100%;
-        height: 84px;
-    }
-    .header-buttons {
-        display: none;
-    }
-    .header-icons {
-        display: none;
-    }
-    .menu {
-    display: block;
-    margin-left: 114px;
-}
-}
+
 </style>

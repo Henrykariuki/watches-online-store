@@ -14,7 +14,7 @@ import ProductsGrid from './components/ProductsGrid.vue'
     <div>
       <LeftPanel></LeftPanel>
     </div>
-    <div>
+    <div class="w-full">
       <FiltersRow></FiltersRow>
       <ProductsGrid></ProductsGrid>
     </div>

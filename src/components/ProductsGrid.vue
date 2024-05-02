@@ -60,7 +60,12 @@ const products = [
 ]
 </script>
 <template>
-<div class="container">
+<div class="container 
+flex flex-col items-center my-2
+w-full h-auto sm:ml-2
+sm:grid sm:grid-cols-2 gap-1
+md:grid md:grid-cols-3 gap-2
+lg:grid lg:grid-cols-4 gap-3">
 <ProductCard 
 :name="item.name"
 :about="item.about"
@@ -73,47 +78,17 @@ class="product-style"/>
 </div>
 </template>
 <style scoped>
-.container {
+
+/*.container {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     row-gap: 14px;
     column-gap: 14px;
     width: auto;
     margin-left: 30px;
-}
+}*/
 .product-style {
-    margin: 4px;
-}
-@media (min-width: 1200px) {
-    .container {
-        display: grid;
-        grid-template-columns: 24% 24% 24% 24%;
-        width: auto;
-    }   
+    /*margin: 4px;*/
 }
 
-@media (min-width: 700px) and (max-width: 1200px) {
-    .container {
-        display: grid;
-        grid-template-columns: 25% 25% 25%;
-        width: auto;
-    }
-}
-
-@media (max-width: 900px) {
-    .container {
-        display: grid;
-        grid-template-columns: 25% 25%;
-        width: auto;
-    }
-}
-@media (max-width: 360px) {
-    .container {
-        display: grid;
-        grid-template-columns: 14% 14%;
-        width: 100%;
-        row-gap: 6px;
-        column-gap: 6px;
-    }
-}
 </style>

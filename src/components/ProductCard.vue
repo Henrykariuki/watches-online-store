@@ -31,7 +31,7 @@ const props = defineProps({
 
 </script>
 <template>
-<div class="product-card-container">
+<div  class="product-card-container hover:shadow-lg duration-100  ">
     <div class="image-container">
        <div class="image-box">
         <img :src="image" alt="green watch" class="image">
@@ -51,9 +51,11 @@ const props = defineProps({
 <style scoped>
 
 .product-card-container {
-    width: auto;
-    margin-right: 8px;
+    width: 100%;
+    /*margin-right: 8px;*/
     background-color: white;
+    margin-bottom: 18px;
+    height: auto;
 }
 .image-box {
     width: auto;
@@ -94,11 +96,5 @@ transform: scale(0.95);
     display: flex;
     align-items: center;
 }
-@media (max-width: 360px) {
-    .image {
-    width: 100;
-    height: auto;
-    object-fit: fill;
-}
-}
+
 </style>

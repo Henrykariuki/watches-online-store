@@ -2,7 +2,7 @@
 import { ChevronDown, Minus, Plus, } from 'lucide-vue-next';
 </script>
 <template>
-    <div class="left-side-bar">
+    <div class="left-side-bar border-r border-x-grey-100 bg-white hidden sm:block">
       <div class="items">250 items</div>
             <div class="container-one">
                 <div class="watches-container">
@@ -63,7 +63,7 @@ import { ChevronDown, Minus, Plus, } from 'lucide-vue-next';
                       <ChevronDown />
                     </div>
                 </div>
-                <input type="text" placeholder="Search brands" class="search-bar">
+                <input type="text" placeholder="Search brands" class="search-bar hover:placeholder-gray-900 ">
                 <div class="category">
                     <div class="remove"><Minus Plus size="16px"/></div>
                     <p class="category-text">Rolex</p>
@@ -94,11 +94,12 @@ import { ChevronDown, Minus, Plus, } from 'lucide-vue-next';
 
 <style scoped>
 
-.left-side-bar {
+
+/*.left-side-bar {
     width: 280px;
     border-right:  1px solid rgb(219, 218, 218);
     background-color: white;
-}
+}*/
 .items {
     width: 200px;
     height: 30px;
@@ -189,20 +190,12 @@ import { ChevronDown, Minus, Plus, } from 'lucide-vue-next';
     outline: none;
     border: 2px solid grey;
     margin-left: 10px;
+    transition: 0.15s;
 }
-@media (max-width: 700px) {
-    .left-side-bar {
-        width: auto;
-    }
+.search-bar:hover {
+    background-color: lightgray;
+    color: black;
+    cursor: text;
 }
-@media (min-width: 1000px) {
-    .left-side-bar {
-        width: auto;
-    }
-}
-@media (max-width: 360px) {
-    .left-side-bar {
-        display: none;
-    }
-}
+
 </style>
