@@ -37,8 +37,7 @@ const props = defineProps({
         <img :src="image" alt="green watch" class="image">
        </div>
         <div class="likes">
-             <p style="font-size: 12px">{{ likes }}<Plus size="8px"/></p>
-            <Heart size="12px"/>
+             <p style="font-size: 12px">{{ likes }}</p><Plus size="8px"/><Heart size="12px"/>
         </div>
     </div>
     <div class="watch-info-container">
@@ -95,6 +94,5 @@ transform: scale(0.95);
     right: 6px;
     display: flex;
     align-items: center;
-}
-
+    }
 </style>

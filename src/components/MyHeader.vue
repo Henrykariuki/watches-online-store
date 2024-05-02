@@ -57,10 +57,7 @@ import {Bell, ShoppingCart, User, Menu, X } from 'lucide-vue-next';
  </div>      
 </template>
 <style scoped>
-/*.header-box {
-    width: 100%;
-    height: auto;
-}*/
+
 .header-container {
     width: 100%;
     height: 84px;
