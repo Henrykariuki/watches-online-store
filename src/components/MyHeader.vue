@@ -1,14 +1,14 @@
 <script setup>
 import {Bell, ShoppingCart, User, Menu, X } from 'lucide-vue-next';
- function showSidebar() {
-    const sidebar = document.querySelector('.right-side-bar')
-    sidebar.style.display = 'block'
- } 
+import {ref} from 'vue';
 
- function hideSidebar() {
-    const sidebar = document.querySelector('.right-side-bar')
-    sidebar.style.display = 'none'
- }
+
+const open = ref(false)
+
+const menuOpen = () => {
+    open.value = !open.value
+}
+ 
 </script>
 <template>
  <div class="bg-yellow-100">
@@ -37,7 +37,7 @@ import {Bell, ShoppingCart, User, Menu, X } from 'lucide-vue-next';
                 </div>
                 
             </div>
-            <div onclick=showSidebar() class="sm:hidden"><Menu size="38px"/></div>
+            <div class="sm:hidden" @click="menuOpen"><Menu size="38px"/></div>
         </div>
         <div class="header-container-info">
             <div class="header-info">
@@ -45,8 +45,8 @@ import {Bell, ShoppingCart, User, Menu, X } from 'lucide-vue-next';
                 <div class="watch-count">250</div>
             </div>
         </div>
-        <div class="right-side-bar">
-            <div onclick=hideSidebar() class="close-button"><X /></div>
+        <div class="right-side-bar" :class="[open ? 'right-0' : 'left-[-100%]']">
+            <div class="close-button" @click="menuOpen"><X size="20px"/></div>
             <div class="button">Auctions</div>
             <div class="button"> Buy now</div>
             <div class="button">Hot deals</div>
@@ -76,19 +76,17 @@ import {Bell, ShoppingCart, User, Menu, X } from 'lucide-vue-next';
 }
 .right-side-bar {
     position: absolute;
-    border: 1px solid black;
     background-color: rgba(128, 128, 128, 0.171);
     backdrop-filter: blur(10px);
-    top: 84px;
+    top: 62px;
     right: 0;
     width: 180px;
     height: 400px;
     z-index: 1;
     border-radius: 2px;
-    display: none;
+    
 }
 .close-button {
-    border: 1px solid black; 
     width:24px; 
     height: 24px;
     display: flex;

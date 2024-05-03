@@ -34,7 +34,7 @@ const props = defineProps({
 <div  class="product-card-container hover:shadow-lg duration-100  ">
     <div class="image-container">
        <div class="image-box">
-        <img :src="image" alt="green watch" class="image">
+        <img :src="image" alt="green watch" class="image object-cover sm:object-cover">
        </div>
         <div class="likes">
              <p style="font-size: 12px">{{ likes }}</p><Plus size="8px"/><Heart size="12px"/>

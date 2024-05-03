@@ -135,6 +135,7 @@ import { ChevronDown, Minus, Plus, } from 'lucide-vue-next';
     justify-content: flex-start;
     align-items: center;
     padding-left: 20px;
+    transition: 0.15s;
 }
 .category-text {
     font-size: 13px;
