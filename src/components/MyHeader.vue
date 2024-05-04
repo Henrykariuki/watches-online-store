@@ -357,10 +357,10 @@ const openLeftMenu = () => {
     align-items: center;
 }
 .search-bar {
-    padding: 10px 15px;
+    padding: 10px 10px;
     outline: none;
     border: 2px solid grey;
-    margin-left: 10px;
+    margin-left: 8px;
     transition: 0.15s;
 }
 .search-bar:hover {
