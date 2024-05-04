@@ -147,7 +147,7 @@ const openLeftMenu = () => {
             </div>
         </div>
         
-        <div class="right-side-bar " :class="[open ? 'right-0' : 'left-[-100%]']">
+        <div class="right-side-bar duration-500 " :class="[open ? 'right-0' : 'left-[-100%]']">
             <div class="close-button" @click="menuOpen"><X size="20px"/></div>
             <div class="button">Auctions</div>
             <div class="button"> Buy now</div>
@@ -182,10 +182,11 @@ const openLeftMenu = () => {
     backdrop-filter: blur(10px);
     top: 62px;
     right: 0;
-    width: 50%;
+    width: 100%;
     height: 400px;
     z-index: 1;
     border-radius: 2px;
+    text-align: center;
 }
 .close-button {
     width:24px; 
