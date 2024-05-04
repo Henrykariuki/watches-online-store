@@ -93,13 +93,6 @@ import { ChevronDown, Minus, Plus, } from 'lucide-vue-next';
 </template>
 
 <style scoped>
-
-
-/*.left-side-bar {
-    width: 280px;
-    border-right:  1px solid rgb(219, 218, 218);
-    background-color: white;
-}*/
 .items {
     width: 200px;
     height: 30px;

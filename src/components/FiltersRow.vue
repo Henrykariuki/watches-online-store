@@ -13,7 +13,7 @@ import { X, ChevronDown } from 'lucide-vue-next';
         <button style="background-color: white;  
         padding: 8px 4px; display: 
         flex; text-align: center;" 
-        class="w-full rounded-lg cursor-pointer my-1 lg:w-auto  ">Newest first<ChevronDown size="12px"/></button>
+        class="w-full rounded-lg cursor-pointer my-1 lg:w-auto hover:bg-gray-300">Newest first<ChevronDown size="12px"/></button>
   </div>
 </template>
 <style scoped>
@@ -24,7 +24,7 @@ import { X, ChevronDown } from 'lucide-vue-next';
     justify-content: space-between;
     align-items: center;
 }*/
-
+ 
 .filter-buttons {
     background-color: white;
     border-radius: 16px;
